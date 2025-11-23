@@ -1,0 +1,33 @@
+{
+  "project": {
+    "name": "study_agent_final",
+    "version": "1.0.0",
+    "description": "Local Gemini CLI project with Context7 MCP server"
+  },
+
+  "defaultModel": "gemini-2.0-flash",
+
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-58b191ac-645d-4c90-8f25-5250bd2394d2"
+      }
+    }
+  },
+
+  "mcp": {
+    "allowed": ["context7"]
+  },
+
+  "telemetry": {
+    "enabled": false
+  },
+
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
+}
